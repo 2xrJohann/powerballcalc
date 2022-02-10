@@ -35,7 +35,7 @@ func countBalls(resmap map[int]bool, selectionz Selections, without chan Resulte
 
 	counter := 0
 	for _, res := range selectionz.selections.selections{
-		if resmap[res] == true{
+		if _, found := resmap[res]; found == true {
 			counter++
 		}
 	}
